@@ -119,7 +119,7 @@ public class ConnectFourGUI extends JFrame implements ActionListener {
 			int whoWon = game.getWinner();
 			for(int a = 0; a < game.getWinningPositions().length; a++)	{
 				row = game.getWinningPositions()[a].getRow();
-				col = game.getWinningPositions()[a].getColumn();
+				col = game.getWinningPositions()[a].getCol();
 				if(buttons[row][col].getIcon().equals(gameWonIcon))	{
 					ImageIcon temp = (whoWon == 1) ? p1Icon : p2Icon;
 					buttons[row][col].setIcon(temp);
@@ -250,7 +250,7 @@ public class ConnectFourGUI extends JFrame implements ActionListener {
 		int row, col;
 		for(int a = 0; a < game.getWinningPositions().length; a++)	{
 			row = game.getWinningPositions()[a].getRow();
-			col = game.getWinningPositions()[a].getColumn();
+			col = game.getWinningPositions()[a].getCol();
 			buttons[row][col].setIcon(gameWonIcon);
 		}
 	}
